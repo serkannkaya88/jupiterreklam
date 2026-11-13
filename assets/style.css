@@ -197,11 +197,11 @@ a.card{display:flex;flex-direction:column;color:inherit}
 .foot a.logo{display:flex;flex-direction:column;padding:0}
 /* hero photo */
 .hero.photo{min-height:min(88vh,760px);display:flex;align-items:center;padding:110px 0;
-  background:linear-gradient(90deg,rgba(7,13,31,.96) 0%,rgba(7,13,31,.85) 38%,rgba(7,13,31,.15) 75%,rgba(7,13,31,.05) 100%),url(hero.webp) center right/cover no-repeat}
+  background:linear-gradient(90deg,rgba(7,13,31,.96) 0%,rgba(7,13,31,.85) 38%,rgba(7,13,31,.15) 75%,rgba(7,13,31,.05) 100%),url(hero.webp?v=4) center right/cover no-repeat}
 .hero.photo::after{display:none}
 .hero.photo .lead{color:#C9CEDB}
 @media(max-width:900px){
-  .hero.photo{min-height:auto;padding:90px 0 80px;background:linear-gradient(180deg,rgba(7,13,31,.55) 0%,rgba(7,13,31,.92) 70%),url(hero-sm.webp) 70% center/cover no-repeat}
+  .hero.photo{min-height:auto;padding:90px 0 80px;background:linear-gradient(180deg,rgba(7,13,31,.55) 0%,rgba(7,13,31,.92) 70%),url(hero-sm.webp?v=4) 70% center/cover no-repeat}
 }
 .hero.photo .wrap{width:100%}
 .hero.photo h1,.hero.photo .lead{max-width:600px}
