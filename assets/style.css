@@ -230,3 +230,8 @@ a.card{display:flex;flex-direction:column;color:inherit}
   .svc-img{order:-1}
   .ticks-2{grid-template-columns:1fr}
 }
+.cards-5{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.cards-5 .card-body{padding:16px 18px 18px}
+.cards-5 h3{font-size:1.15rem;margin:0}
+.cards-5 .more{padding-top:10px}
+@media(max-width:900px){.cards-5{grid-template-columns:1fr 1fr}}
