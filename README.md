@@ -9,3 +9,5 @@ Statik site, GitHub Pages üzerinde yayınlanır. Alan adı: jupiterreklam.com (
 - KVKK metnindeki `[Firma ticaret unvanı]`
 - Proje ve atölye fotoğrafları (`.ph` yer tutucuları yerine `<img>`; WebP önerilir)
 - Logo kesinleşince başlıktaki yazı logosu ve `assets/favicon.svg`
+- Ana sayfadaki Google işletme bilgisi (schema, `application/ld+json`): telefon ve adres gerçek bilgilerle güncellenmeli
+- Teklif sihirbazı (`iletisim.html`): "Formu Gönder" için Web3Forms anahtarı, "WhatsApp ile Gönder" için `data-wa` numarası

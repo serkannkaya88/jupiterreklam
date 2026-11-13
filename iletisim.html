@@ -18,8 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=7">
-<script src="assets/site.js?v=4" defer></script>
+<link rel="stylesheet" href="assets/style.css?v=8">
+<script src="assets/site.js?v=8" defer></script>
+
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -39,7 +40,7 @@
   </div>
 </header>
 <main>
-<section class="page-hero"><div class="wrap"><div class="eyebrow">İletişim</div><h1>Projenizi konuşalım</h1><p>Formu doldurun ya da WhatsApp'tan fotoğraf gönderin; en kısa sürede dönüş yapalım.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">İletişim</div><h1>Projenizi konuşalım</h1><p>4 kısa adımda ihtiyacınızı anlatın; aynı gün içinde dönüş yapalım.</p></div></section>
 <section class="cream"><div class="wrap two">
 <ul class="info">
 <li><span>Telefon</span><a href="tel:+90XXXXXXXXXX">[Telefon]</a></li>
@@ -48,19 +49,50 @@
 <li><span>Adres</span><span>[Atölye / ofis adresi]</span></li>
 <li><span>Saatler</span><span>Pazartesi – Cumartesi · 09:00 – 18:30</span></li>
 </ul>
-<form action="https://api.web3forms.com/submit" method="POST">
+<form class="wiz" id="wiz" action="https://api.web3forms.com/submit" method="POST" data-wa="90XXXXXXXXXX" novalidate>
 <input type="hidden" name="access_key" value="WEB3FORMS_ANAHTARI">
 <input type="hidden" name="subject" value="Web sitesinden yeni teklif talebi">
 <input type="hidden" name="redirect" value="https://jupiterreklam.com/tesekkurler.html">
 <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+<div class="wiz-bar" aria-hidden="true"><span></span></div>
+<div class="wiz-steps"><b class="on">1 Hizmet</b><b>2 Ölçü</b><b>3 Konum</b><b>4 İletişim</b></div>
+
+<fieldset class="wstep on" data-step="1"><legend>Hangi hizmetle ilgileniyorsunuz?</legend>
+<div class="opts"><label class="opt"><input type="radio" name="hizmet" value="LED Tabela" required><span>LED Tabela</span></label><label class="opt"><input type="radio" name="hizmet" value="Işıklı Kutu Harf" required><span>Işıklı Kutu Harf</span></label><label class="opt"><input type="radio" name="hizmet" value="AVM Light Box & Poster Panoları" required><span>AVM Light Box & Poster Panoları</span></label><label class="opt"><input type="radio" name="hizmet" value="Işıklı Kutu Tabela" required><span>Işıklı Kutu Tabela</span></label><label class="opt"><input type="radio" name="hizmet" value="Totem & Yönlendirme" required><span>Totem & Yönlendirme</span></label><label class="opt"><input type="radio" name="hizmet" value="Bakım & Yenileme" required><span>Bakım & Yenileme</span></label><label class="opt"><input type="radio" name="hizmet" value="Emin değilim"><span>Emin değilim, önerin</span></label></div>
+</fieldset>
+
+<fieldset class="wstep" data-step="2"><legend>Yaklaşık ölçü ve özellikler</legend>
+<div class="row3"><label class="f">Genişlik (cm)<input name="genislik" type="number" min="0" inputmode="numeric" placeholder="Örn. 300"></label>
+<label class="f">Yükseklik (cm)<input name="yukseklik" type="number" min="0" inputmode="numeric" placeholder="Örn. 80"></label>
+<label class="f">Adet<input name="adet" type="number" min="1" value="1" inputmode="numeric"></label></div>
+<label class="f">Aydınlatma<select name="aydinlatma"><option>Işıklı</option><option>Işıksız</option><option>Bilmiyorum</option></select></label>
+<label class="f">Mekân<select name="mekan"><option>Dış cephe</option><option>İç mekân / AVM</option><option>Her ikisi</option></select></label>
+<p class="hint">Ölçüyü bilmiyorsanız boş bırakın; keşifte biz ölçeriz.</p>
+</fieldset>
+
+<fieldset class="wstep" data-step="3"><legend>Tabela nereye yapılacak?</legend>
+<div class="row2"><label class="f">İl<input name="il" value="İstanbul" autocomplete="address-level1"></label>
+<label class="f">İlçe<input name="ilce" required placeholder="Örn. Küçükçekmece" autocomplete="address-level2"></label></div>
+<label class="f">Ne zaman lazım?<select name="zaman"><option>Acil (1–2 hafta)</option><option>Bu ay içinde</option><option>1–3 ay</option><option>Sadece fiyat araştırıyorum</option></select></label>
+<label class="f">Eklemek istedikleriniz<textarea name="mesaj" placeholder="Mevcut tabelanın durumu, renkler, logo vb."></textarea></label>
+</fieldset>
+
+<fieldset class="wstep" data-step="4"><legend>Size nasıl ulaşalım?</legend>
 <label class="f">Ad Soyad<input name="ad" required autocomplete="name"></label>
-<label class="f">Firma / Mağaza<input name="firma" autocomplete="organization"></label>
-<label class="f">Telefon<input name="telefon" type="tel" required autocomplete="tel"></label>
+<div class="row2"><label class="f">Telefon<input name="telefon" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+<label class="f">Firma / Mağaza<input name="firma" autocomplete="organization"></label></div>
 <label class="f">E-posta<input name="email" type="email" autocomplete="email"></label>
-<label class="f">İlgilendiğiniz hizmet<select name="hizmet"><option>Seçiniz</option><option>LED Tabela</option><option>Işıklı Kutu Harf</option><option>AVM Light Box & Poster Panoları</option><option>Işıklı Kutu Tabela</option><option>Totem & Yönlendirme</option><option>Bakım & Yenileme</option></select></label>
-<label class="f">Mesajınız<textarea name="mesaj" placeholder="Ölçü, konum ve kısaca ihtiyacınız"></textarea></label>
-<label class="kvkk"><input type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum; iletişim bilgilerimin teklif amacıyla işlenmesini kabul ediyorum.</span></label>
-<button class="btn btn-primary" type="submit">Teklif İste</button>
+<label class="kvkk"><input type="checkbox" name="kvkk" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum; bilgilerimin teklif amacıyla işlenmesini kabul ediyorum.</span></label>
+<p class="hint">Tabela yerinin veya logonuzun fotoğrafını göndermek için <b>WhatsApp ile Gönder</b>'i seçin; bilgileriniz hazır yazılı gelir, fotoğrafı ekleyip gönderirsiniz.</p>
+</fieldset>
+
+<p class="wiz-err" role="alert"></p>
+<div class="wiz-nav">
+<button type="button" class="btn btn-ghost" data-prev>Geri</button>
+<button type="button" class="btn btn-primary" data-next>Devam</button>
+<button type="submit" class="btn btn-primary" data-submit>Formu Gönder</button>
+<button type="button" class="btn btn-wa" data-wa-send>WhatsApp ile Gönder</button>
+</div>
 </form>
 </div></section>
 </main>
