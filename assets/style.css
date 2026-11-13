@@ -207,3 +207,10 @@ a.card{display:flex;flex-direction:column;color:inherit}
 .hero.photo h1,.hero.photo .lead{max-width:600px}
 @media(max-width:900px){.topbar .tb-l{display:none}.topbar .wrap{justify-content:center}}
 @media(max-width:480px){.topbar .tb-r a[href^="mailto"]{display:none}}
+.card.has-img{padding:0;overflow:hidden}
+.card.has-img>*:not(.card-img){margin-left:28px;margin-right:28px}
+.card.has-img .num{margin-top:24px}
+.card.has-img .more{margin-bottom:26px}
+.card-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .5s}
+.card.has-img:hover .card-img{transform:scale(1.04)}
+.card-ph{display:flex;align-items:center;justify-content:center;background:#EAE3D6;color:#6B6455;font-size:.85rem}
